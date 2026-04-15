@@ -1,0 +1,12 @@
+/* ============================================
+   VRIHI-SKYDECK — Global Index CSS
+   Imports design system + component styles
+   ============================================ */
+
+/* Import Bootstrap (base grid/utilities only) */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Import our design system on top */
+@import './design-system.css';
+@import './components.css';
+@import './pages.css';

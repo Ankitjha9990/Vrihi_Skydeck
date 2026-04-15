@@ -1,0 +1,82 @@
+/* ============================================
+   VRIHI-SKYDECK — Page-specific styles
+   ============================================ */
+
+/* ─── HOME ─── */
+.home-story-section { padding-block: var(--sp-3xl); }
+
+/* ─── ABOUT page hero adjustments ─── */
+.about-hero-label { margin-bottom: var(--sp-sm); }
+
+/* ─── MENU page ─── */
+.menu-hero { background: linear-gradient(to bottom, rgba(13,13,13,0.5), rgba(13,13,13,1)); }
+.menu-tab-nav { display: flex; gap: var(--sp-sm); flex-wrap: wrap; justify-content: center; margin-bottom: var(--sp-2xl); }
+.menu-tab-btn {
+  padding: 10px 22px; background: transparent; border: 1px solid var(--border-ghost);
+  border-radius: 2px; font-family: var(--font-sans); font-size: 0.78rem;
+  font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-body); cursor: pointer;
+  transition: background var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast);
+}
+.menu-tab-btn:hover, .menu-tab-btn.active {
+  background: var(--surface-low); border-color: var(--primary); color: var(--primary);
+}
+
+/* ─── GALLERY FILTERS ─── */
+.gallery-filter-bar { display: flex; gap: var(--sp-sm); flex-wrap: wrap; justify-content: center; margin-bottom: var(--sp-xl); }
+.gallery-filter-btn {
+  padding: 8px 18px; background: transparent; border: 1px solid var(--border-ghost);
+  border-radius: 2px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-body); cursor: pointer;
+  transition: all var(--duration-fast);
+}
+.gallery-filter-btn:hover, .gallery-filter-btn.active {
+  background: var(--surface-low); border-color: var(--primary); color: var(--primary);
+}
+
+/* ─── EVENTS page ─── */
+.art-of-setup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 8px;
+}
+.art-of-setup-grid .art-img-tall { grid-row: span 2; }
+.art-img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius-sm); }
+.art-img-tall { width: 100%; height: 100%; min-height: 490px; object-fit: cover; border-radius: var(--radius-sm); }
+
+@media (max-width: 768px) {
+  .art-of-setup-grid { grid-template-columns: 1fr; }
+  .art-of-setup-grid .art-img-tall { grid-row: auto; }
+  .art-img-tall { min-height: 260px; height: 260px; }
+}
+
+/* ─── CONTACT page ─── */
+.contact-info-card {
+  background: var(--surface-low);
+  border: 1px solid var(--border-ghost);
+  border-radius: var(--radius-md);
+  padding: var(--sp-xl);
+}
+.hours-row { display: flex; justify-content: space-between; font-size: 0.875rem; color: var(--text-body); padding-block: 8px; border-bottom: 1px solid var(--border-ghost); }
+.hours-row:last-child { border-bottom: none; }
+.hours-day { font-weight: 600; color: var(--text-headline); }
+
+/* ─── BLOG page ─── */
+.blog-hero { padding-block: var(--sp-3xl); }
+
+/* ─── Responsive tweaks ─── */
+@media (max-width: 768px) {
+  .trust-bar { grid-template-columns: 1fr; }
+  .trust-bar__item {
+    border-radius: 0 !important;
+    border-left: 1px solid var(--border-ghost) !important;
+    border-bottom: 0 !important;
+  }
+  .trust-bar__item:first-child { border-radius: var(--radius-sm) var(--radius-sm) 0 0 !important; }
+  .trust-bar__item:last-child { border-radius: 0 0 var(--radius-sm) var(--radius-sm) !important; border-bottom: 1px solid var(--border-ghost) !important; }
+  .events-banner { min-height: 360px; }
+  .events-banner__content { padding: var(--sp-2xl) var(--sp-md); }
+  .reserve-section__inner { padding: var(--sp-xl) var(--sp-md); }
+  .vs-footer .row.mt-4 { margin-top: var(--sp-md) !important; }
+}
